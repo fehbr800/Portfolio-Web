@@ -1,7 +1,10 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from "react-bootstrap";
-import Logo from '../assets/img/logo.svg'
+import Logo from '../assets/img/logo.svg';
+import NavIcon1 from '../assets/img/nav-icon1.svg';
+import NavIcon2 from '../assets/img/nav-icon2.svg';
+import NavIcon3 from '../assets/img/nav-icon3.svg';
 export default function NavBar() {
     const [activeLink, setActiveLink ] = useState('home');
     const [scrolled, setScrolled] = useState(false);
@@ -39,9 +42,9 @@ export default function NavBar() {
                         </Nav>
                         <span className='navbar-text'>
                             <div className='social-icon'>
-                                <a href='/'><img src={""}/></a>
-                                <a href='/'><img src={""}/></a>
-                                <a href='/'><img src={""}/></a>
+                                <a href='/'><img src={NavIcon1}/></a>
+                                <a href='/'><img src={NavIcon2}/></a>
+                                <a href='/'><img src={NavIcon3}/></a>
                             </div>
                             <button className='' onClick={() => console.log('funcionando')} ><span>Funcionando</span></button>
                         </span>
