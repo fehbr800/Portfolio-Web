@@ -1,0 +1,19 @@
+@use '../variables/variables.scss';
+
+@mixin font-bold{
+    font-family: $font-principal;
+    src: url('../../assets/font/CentraNo2-Bold.ttf');
+    font-weight: 700;
+}
+
+@mixin font-medium{
+    font-family: $font-principal;
+    src: url('../../assets/font/CentraNo2-Medium.ttf');
+    font-weight: 500;
+}
+
+@mixin font-book{
+    font-family: $font-principal;
+    src: url('../../assets/font/CentraNo2-Book.ttf');
+    font-weight: 400;
+}
