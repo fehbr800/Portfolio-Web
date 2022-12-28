@@ -3,7 +3,7 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
-// import colorSharp2 from "../assets/img/color-sharp2.png";
+import ColorSharp2 from "../assets/img/color-sharp2.png";
 
 
 export const Projects = () => {
@@ -49,7 +49,7 @@ export const Projects = () => {
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error saepe vitae sed pariatur aspernatur ea, voluptatum reprehenderit ex id, doloribus voluptates, repellat eos illo fuga exercitationem mollitia quo! Eum, optio!
                         </p>
                         <Tab.Container id="projects-tab" defaultActiveKey='first'>
-                        <Nav variant="pills" defaultActiveKey="/home">
+                        <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                             <Nav.Item>
                                 <Nav.Link eventKey="first">Tab One</Nav.Link>
                             </Nav.Item>
@@ -66,7 +66,9 @@ export const Projects = () => {
                                  {
                                     projects.map((project, index) =>{
                                         return (
-                                          <ProjectCard/>
+                                          <ProjectCard
+                                         key={index}
+                                         {...project}/>
                                         )
                                     })
                                  }   
@@ -79,7 +81,7 @@ export const Projects = () => {
                     </Col>
                 </Row>
             </Container>
-
+            <img className="background-image-right" src={ColorSharp2}/>
         </section>
     )
 }
