@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from "react-bootstrap";
 import Logo from '../assets/img/logo.svg';
 import NavIcon1 from '../assets/img/nav-icon1.svg';
-import NavIcon2 from '../assets/img/nav-icon2.svg';
+import NavIcon2 from '../assets/img/github.png';
 import NavIcon3 from '../assets/img/nav-icon3.svg';
 export  const NavBar = () => {
     const [activeLink, setActiveLink ] = useState('home');
@@ -37,14 +37,14 @@ export  const NavBar = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link': 'navbar-link'} onClick={()=> onUpdateActiveLink('home')}>Home</Nav.Link>
-                            <Nav.Link href="#Skills" className={activeLink === 'skills' ? 'active navbar-link': 'navbar-link' } onClick={()=> onUpdateActiveLink('skills')}>Skills</Nav.Link>
+                            <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link': 'navbar-link' } onClick={()=> onUpdateActiveLink('skills')}>Skills</Nav.Link>
                             <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link': 'navbar-link' } onClick={()=> onUpdateActiveLink('projects')}>Projetos</Nav.Link>
                         </Nav>
                         <span className='navbar-text'>
                             <div className='social-icon'>
-                                <a href='/'><img src={NavIcon1}/></a>
-                                <a href='/'><img src={NavIcon2}/></a>
-                                <a href='/'><img src={NavIcon3}/></a>
+                                <a target="_blank" href='https://www.linkedin.com/in/matheus-emanoel-995b23181/'><img src={NavIcon1}/></a>
+                                <a target="_blank" href='/'><img src={NavIcon2}/></a>
+                                <a target="_blank"href='/'><img src={NavIcon3}/></a>
                             </div>
                             <button className='' onClick={() => console.log('funcionando')} ><span>Vamos nos Conectar</span></button>
                         </span>

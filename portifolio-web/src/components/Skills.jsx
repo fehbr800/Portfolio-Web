@@ -34,7 +34,7 @@ export const Skills = () => {
                 <Row>
                     <Col>
 
-                        <div className='skill-bx'>
+                        <div className='skill-bx mt-4'>
 
                             <h2>Skills</h2>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem praesentium numquam similique impedit maxime totam ex, quisquam nobis nemo reiciendis repellat odio aliquam quidem voluptatem exercitationem laborum enim quia cupiditate?</p>
@@ -67,7 +67,7 @@ export const Skills = () => {
                     </Col>
                 </Row>
             </Container>
-            <img className='backgroung-image-left' src={ColorSharp} />
+            {/* <img className='backgroung-image-left' src={ColorSharp} /> */}
         </section>
     )
 }
