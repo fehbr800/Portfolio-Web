@@ -5,6 +5,8 @@ import Meter1 from '../assets/img/meter1.svg';
 import Meter2 from '../assets/img/meter2.svg';
 import Meter3 from '../assets/img/meter3.svg';
 import ColorSharp from '../assets/img/color-sharp.png';
+import TrackVisibility from 'react-on-screen';
+import 'animate.css';
 export const Skills = () => {
     const responsive = {
         superLargeDesktop: {
@@ -31,33 +33,41 @@ export const Skills = () => {
             <Container>
                 <Row>
                     <Col>
+
                         <div className='skill-bx'>
+
                             <h2>Skills</h2>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem praesentium numquam similique impedit maxime totam ex, quisquam nobis nemo reiciendis repellat odio aliquam quidem voluptatem exercitationem laborum enim quia cupiditate?</p>
-                            <Carousel  responsive={responsive} infinite={true} className='skill-slider'>
-                                <div className='item'>
-                                    <img src={Meter1}/>
-                                    <h5>Web Development</h5>
-                                </div>
-                                <div className='item'>
-                                    <img src={Meter2}/>
-                                    <h5>Brand Identity</h5>
-                                </div>
-                                <div className='item'>
-                                    <img src={Meter3}/>
-                                    <h5>Logo Design </h5>
-                                </div>
-                                <div className='item'>
-                                    <img src={Meter1}/>
-                                    <h5>Web Development</h5>
-                                </div>
-                            </Carousel>
+                            <TrackVisibility>
+                                {({ isVisible }) =>
+                                    <div className={isVisible ? "animate__animated animate__bounce" : ""}>
+                                        <Carousel responsive={responsive} infinite={true} className='skill-slider'>
+                                            <div className='item'>
+                                                <img src={Meter1} />
+                                                <h5>Web Development</h5>
+                                            </div>
+                                            <div className='item'>
+                                                <img src={Meter2} />
+                                                <h5>Brand Identity</h5>
+                                            </div>
+                                            <div className='item'>
+                                                <img src={Meter3} />
+                                                <h5>Logo Design </h5>
+                                            </div>
+                                            <div className='item'>
+                                                <img src={Meter1} />
+                                                <h5>Web Development</h5>
+                                            </div>
+                                        </Carousel>
+                                    </div>}
+                            </TrackVisibility>
                         </div>
-                        
+
+
                     </Col>
                 </Row>
             </Container>
-            <img className='backgroung-image-left' src={ColorSharp}/>
+            <img className='backgroung-image-left' src={ColorSharp} />
         </section>
     )
 }

@@ -2,6 +2,8 @@ import { Col, Container, Row } from "react-bootstrap"
 import { useState, useEffect } from "react";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import HeaderImg from "../assets/img/header-img.svg"
+import TrackVisibility from 'react-on-screen';
+import 'animate.css';
 
 export const Banner = () => {
     const [loopNum, SetLoopNum] = useState(0);
@@ -45,10 +47,15 @@ export const Banner = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
+                        <TrackVisibility> 
+                        {({isVisible}) =>
+                        <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                         <span className="tagline">Bem-vindo ao meu Portfólio</span>
                         <h1>{`Olá, me chamo Matheus Emanoel`}<span className="wrap">{text}</span></h1>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero animi consequatur culpa, quod at exercitationem rerum ab numquam ad eos! Repellat, voluptas. Magni, accusantium deserunt. Est neque itaque molestiae soluta.</p>
                         <button onClick={() => console.log("testando")}>Vamos nos Conectar<ArrowRightCircle size={25} /></button>
+                        </div>}
+                        </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={HeaderImg} />
