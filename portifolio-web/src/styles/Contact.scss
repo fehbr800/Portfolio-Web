@@ -1,5 +1,5 @@
 .contact {
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    background: #121212;
     padding: 60px 0 200px 0;
   }
   .contact img {
@@ -38,8 +38,8 @@
   }
   .contact form button {
     font-weight: 700;
-    color: #000;
-    background-color: #fff;
+    color: #fff;
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
     padding: 14px 48px;
     font-size: 18px;
     margin-top: 25px;
@@ -52,11 +52,11 @@
     position: relative;
   }
   .contact form button:hover {
-    color: #fff;
+    color:#000;
   }
   .contact form button::before {
     content: "";
-    background: #121212;
+    background: #fff;
     width: 0;
     height: 100%;
     position: absolute;

@@ -36,31 +36,34 @@ export const Skills = () => {
 
                         <div className='skill-bx mt-4'>
 
-                            <h2 className='mb-5'>Skills</h2>
+                            <h2 className='mb-'>Skills</h2>
                             
                             <TrackVisibility>
                                 {({ isVisible }) =>
                                     <div className={isVisible ? "animate__animated animate__bounce" : ""}>
                                         <Carousel responsive={responsive} infinite={true} className='skill-slider'>
                                             <div className='item'>
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" />
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" />
+                                                <img src={Meter1} />
                                                 <h5>HTML/CSS</h5>
                                             </div>
                                             <div className='item'>
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" />
-                                                <h5>JavaScript</h5>
+                                                <img src={Meter2} />
+                                                <h5>JAVASCRIPT</h5>
                                             </div>
                                             <div className='item'>
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" />
-                                                <h5>React </h5>
+                                                <img src={Meter3} />
+                                                <h5>REACT</h5>
                                             </div>
                                             <div className='item'>
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" />
-                                                <h5>NodeJS</h5>
+                                                <img src={Meter2} />
+                                                <h5>BOOSTSTRAP </h5>
                                             </div>
                                             <div className='item'>
-                                                <img src="https://img.icons8.com/external-flaticons-flat-circular-flat-icons/512/external-ux-media-agency-flaticons-flat-circular-flat-icons.png" />
+                                                <img src={Meter1} />
+                                                <h5>GIT/GITHUB</h5>
+                                            </div>
+                                            <div className='item'>
+                                                <img src={Meter3} />
                                                 <h5>UX/UI</h5>
                                             </div>
                                         </Carousel>
