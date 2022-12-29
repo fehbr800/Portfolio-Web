@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Navbar, Nav, Container } from "react-bootstrap";
 import NavIcon1 from '../assets/img/nav-icon1.svg';
 import NavIcon2 from '../assets/img/github.png';
@@ -45,7 +46,9 @@ export const NavBar = () => {
                                 <a target="_blank" href='https://github.com/fehbr800'><img src={NavIcon2} /></a>
                                 <a target="_blank" href='https://www.instagram.com/math_emanoel/'><img src={NavIcon3} /></a>
                             </div>
-                            <button className='' onClick={() => console.log('funcionando')} ><span>Vamos nos Conectar</span></button>
+                           <Nav.Link href="#Contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contact')}>
+                            <button className='' ><span>Vamos nos Conectar</span></button>
+                            </Nav.Link>
                         </span>
                     </Navbar.Collapse>
                 </Container>
