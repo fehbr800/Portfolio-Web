@@ -53,7 +53,7 @@ export const Projects = () => {
 
                                     <h2>Projetos</h2>
                                     <p>
-                                       Projetos feitos ao longo de minha jornada
+                                       Projetos desenvolvidos ao longo de minha jornada
                                     </p>
 
                                     <Tab.Container id="projects-tab" defaultActiveKey='first'>
