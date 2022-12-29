@@ -29,34 +29,39 @@ export const Skills = () => {
     };
 
     return (
-        <section className='skill' id='skills'>
+        <section className='skill mt-5 mb-5' id='skills'>
             <Container>
                 <Row>
                     <Col>
 
                         <div className='skill-bx mt-4'>
 
-                            <h2>Skills</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem praesentium numquam similique impedit maxime totam ex, quisquam nobis nemo reiciendis repellat odio aliquam quidem voluptatem exercitationem laborum enim quia cupiditate?</p>
+                            <h2 className='mb-5'>Skills</h2>
+                            
                             <TrackVisibility>
                                 {({ isVisible }) =>
                                     <div className={isVisible ? "animate__animated animate__bounce" : ""}>
                                         <Carousel responsive={responsive} infinite={true} className='skill-slider'>
                                             <div className='item'>
-                                                <img src={Meter1} />
-                                                <h5>Web Development</h5>
+                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" />
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" />
+                                                <h5>HTML/CSS</h5>
                                             </div>
                                             <div className='item'>
-                                                <img src={Meter2} />
-                                                <h5>Brand Identity</h5>
+                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" />
+                                                <h5>JavaScript</h5>
                                             </div>
                                             <div className='item'>
-                                                <img src={Meter3} />
-                                                <h5>Logo Design </h5>
+                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" />
+                                                <h5>React </h5>
                                             </div>
                                             <div className='item'>
-                                                <img src={Meter1} />
-                                                <h5>Web Development</h5>
+                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" />
+                                                <h5>NodeJS</h5>
+                                            </div>
+                                            <div className='item'>
+                                                <img src="https://img.icons8.com/external-flaticons-flat-circular-flat-icons/512/external-ux-media-agency-flaticons-flat-circular-flat-icons.png" />
+                                                <h5>UX/UI</h5>
                                             </div>
                                         </Carousel>
                                     </div>}

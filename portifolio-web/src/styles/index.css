@@ -303,6 +303,15 @@ nav.navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
   margin-left: 25px;
 }
 
+.banner img {
+  overflow: hidden;
+  border-radius: 999px;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  -ms-border-radius: 999px;
+  -o-border-radius: 999px;
+}
+
 @keyframes updown {
   0% {
     transform: translateY(-20px);

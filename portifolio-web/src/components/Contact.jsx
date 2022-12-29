@@ -24,7 +24,7 @@ export const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setButtonText("Sending...");
+        setButtonText("Enviando...");
         let response = await fetch("http://localhost:3000/contact", {
           method: "POST",
           headers: {
@@ -32,7 +32,7 @@ export const Contact = () => {
           },
           body: JSON.stringify(formDetails),
         });
-        setButtonText("Send");
+        setButtonText("Enviar");
         let result = await response.json();
         setFormDetails(formInitialDetails);
         if (result.code == 200) {

@@ -1,7 +1,7 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
+import projImg1 from "../assets/img/projeto1.png";
+import projImg2 from "../assets/img/projeto2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import ColorSharp2 from "../assets/img/color-sharp2.png";
 import TrackVisibility from 'react-on-screen';
@@ -10,7 +10,7 @@ import 'animate.css';
 export const Projects = () => {
     const projects = [
         {
-            title: "Business Startup",
+            title: "DH Flix",
             description: "Design & Development",
             imgUrl: projImg1,
         },
@@ -52,7 +52,7 @@ export const Projects = () => {
 
                                     <h2>Projetos</h2>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error saepe vitae sed pariatur aspernatur ea, voluptatum reprehenderit ex id, doloribus voluptates, repellat eos illo fuga exercitationem mollitia quo! Eum, optio!
+                                       Projetos atuais e futuros projetos a serem adicionados ao longo de minha jornada
                                     </p>
 
                                     <Tab.Container id="projects-tab" defaultActiveKey='first'>
