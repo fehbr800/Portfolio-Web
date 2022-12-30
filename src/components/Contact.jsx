@@ -9,30 +9,29 @@ export const Contact = () => {
         email: '',
         phone: '',
         message: ''
-    }
-
-    const [formDetails, setFormDetails] = useState(formInitialDetails);
-    const [buttonText, setButtonText] = useState('Send');
-    const [status, setStatus] = useState({})
-
-    const onFormUpdate = (category, value) => {
-        setFormDetails({
+      }
+      const [formDetails, setFormDetails] = useState(formInitialDetails);
+      const [buttonText, setButtonText] = useState('Send');
+      const [status, setStatus] = useState({});
+    
+      const onFormUpdate = (category, value) => {
+          setFormDetails({
             ...formDetails,
             [category]: value
-        })
-    }
-
-    const handleSubmit = async (e) => {
+          })
+      }
+    
+      const handleSubmit = async (e) => {
         e.preventDefault();
-        setButtonText("Enviando...");
-        let response = await fetch("http://localhost:3000/contact", {
+        setButtonText("Sending...");
+        let response = await fetch("http://localhost:5000/contact", {
           method: "POST",
           headers: {
             "Content-Type": "application/json;charset=utf-8",
           },
           body: JSON.stringify(formDetails),
         });
-        setButtonText("Enviar");
+        setButtonText("Send");
         let result = await response.json();
         setFormDetails(formInitialDetails);
         if (result.code == 200) {
@@ -41,6 +40,7 @@ export const Contact = () => {
           setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
         }
       };
+    
 
     return (
         <section className="contact" id='connect'>
