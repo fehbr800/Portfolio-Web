@@ -5,7 +5,14 @@
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
+    @media only screen and (min-width: 320px) and (max-width: 900px){
+      padding: 200px 0 60px 0;
+      justify-content: center;
+    
+    }
+    
   }
+
   .banner .tagline {
     font-weight: 700;
     letter-spacing: 0.8px;
@@ -15,6 +22,10 @@
     font-size: 20px;
     margin-bottom: 16px;
     display: inline-block;
+    @media only screen and (min-width: 320px) and (max-width: 900px){
+     font-size: 16px;
+     
+    }
   }
   .banner h1 {
     font-size: 65px;
@@ -23,6 +34,11 @@
     line-height: 1;
     margin-bottom: 20px;
     display: block;
+    @media only screen and (min-width: 320px) and (max-width: 900px){
+      flex-wrap: wrap;
+      font-size: 40px;
+    
+    }
   }
   .banner p {
     color: #B8B8B8;
@@ -39,6 +55,7 @@
     letter-spacing: 0.8px;
     display: flex;
     align-items: center;
+   
   }
   .banner button svg {
     font-size: 25px;
@@ -48,6 +65,7 @@
   }
   .banner button:hover svg {
     margin-left: 25px;
+    
   }
   .banner img {
     overflow: hidden;
@@ -56,6 +74,10 @@
     -moz-border-radius: 999px;
     -ms-border-radius: 999px;
     -o-border-radius: 999px;
+    @media only screen and (min-width: 320px) and (max-width: 900px){
+     margin-top: 2rem;
+    
+    }
 }
   @keyframes updown {
       0% {
@@ -70,4 +92,5 @@
   }
   .txt-rotate > .wrap {
     border-right: 0.08em solid #666;
+   
   }

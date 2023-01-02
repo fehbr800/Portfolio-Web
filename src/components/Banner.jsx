@@ -11,7 +11,7 @@ export const Banner = () => {
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const [index, setIndex] = useState(1);
-    const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+    const toRotate = ["Front-End Developer", "UI/UX Designer"];
     const period = 2000;
 
 
@@ -57,7 +57,7 @@ export const Banner = () => {
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <span className="tagline">Bem-vindo ao meu Portfólio</span>
-                                    <h1>{`Olá, me chamo Matheus Emanoel`}<br /><span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'></span><span className="wrap">{text}</span></h1>
+                                    <h1>{`Olá, me chamo Matheus Emanoel`}<br /><span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Front-End Developer", "UI/UX Designer" ]'></span><span className="wrap">{text}</span></h1>
                                     <p>Tenho 21 anos, atualmente estudo desenvolvimento Full-Stack com especialização Front-End pela Rocketseat.
 
                                         Meu objetivo profissional é me especializar e aprimorar minhas habilidades de desenvolvimento Front-end e ferramentas de testes unitários, focando sempre em qualidade e acessibilidade da aplicação.</p>

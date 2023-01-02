@@ -1,9 +1,14 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import Meter1 from '../assets/img/meter1.svg';
-import Meter2 from '../assets/img/meter2.svg';
-import Meter3 from '../assets/img/meter3.svg';
+import LogoHtml from '../assets/img/logo-html-5-256.png';
+import LogoCss from '../assets/img/logo-css-3-256.png';
+import LogoJs from '../assets/img/logo-javascript-256.png';
+import LogoReact from '../assets/img/logo-react-256.png';
+import LogoBs from '../assets/img/bootstrap-256.png';
+import LogoGit from '../assets/img/git-256.png';
+import LogoGitHub from '../assets/img/github-256.png';
+import LogoUiUx from '../assets/img/ui-ux-logo.png';
 import ColorSharp from '../assets/img/color-sharp.png';
 import TrackVisibility from 'react-on-screen';
 import 'animate.css';
@@ -43,28 +48,33 @@ export const Skills = () => {
                                     <div className={isVisible ? "animate__animated animate__bounce" : ""}>
                                         <Carousel responsive={responsive} infinite={true} className='skill-slider'>
                                             <div className='item'>
-                                                <img src={Meter1} />
+                                                <img src={LogoHtml} />
+                                                <img src={LogoCss} />
                                                 <h5>HTML/CSS</h5>
                                             </div>
                                             <div className='item'>
-                                                <img src={Meter2} />
+                                                <img src={LogoJs} />
                                                 <h5>JAVASCRIPT</h5>
                                             </div>
                                             <div className='item'>
-                                                <img src={Meter3} />
+                                                <img src={LogoReact} />
                                                 <h5>REACT</h5>
                                             </div>
                                             <div className='item'>
-                                                <img src={Meter2} />
+                                                <img src={LogoBs} />
                                                 <h5>BOOSTSTRAP </h5>
                                             </div>
                                             <div className='item'>
-                                                <img src={Meter1} />
-                                                <h5>GIT/GITHUB</h5>
+                                                <img src={LogoGit} />
+                                                <h5>GIT</h5>
                                             </div>
                                             <div className='item'>
-                                                <img src={Meter3} />
-                                                <h5>UX/UI</h5>
+                                                <img src={LogoGitHub} />
+                                                <h5>GITHUB</h5>
+                                            </div>
+                                            <div className='item'>
+                                                <img className='mt-5' src={LogoUiUx} />
+                                                <h5 className='mt-4'>UX/UI</h5>
                                             </div>
                                         </Carousel>
                                     </div>}
