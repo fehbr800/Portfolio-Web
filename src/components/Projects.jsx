@@ -13,33 +13,22 @@ export const Projects = () => {
             title: "DH Flix",
             description: "Design & Development",
             imgUrl: projImg1,
+            url: "https://digital-house-checkpoint2-frontend.vercel.app/",
         },
         {
             title: "Game-Cards",
             description: "Design & Development",
             imgUrl: projImg2,
+            url: "https://digital-house-checkpoint1-front-end2.vercel.app/",
         },
         {
             title: "Movie DB",
             description: "Design & Development",
             imgUrl: projImg3,
+            url: "https://react-filmes-eight.vercel.app/",
             
         },
-        {
-            title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg1,
-        },
-        {
-            title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg2,
-        },
-        {
-            title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg3,
-        },
+      
     ];
     return (
         <section className="project" id="project">
