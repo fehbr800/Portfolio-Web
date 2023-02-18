@@ -591,58 +591,32 @@ nav.navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
   margin-bottom: 30px;
 }
 
-.contact form input, .contact form textarea {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
-  color: #fff;
-  margin: 1.3em 0 0 0;
-  padding: 18px 26px;
-  font-weight: 500;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  transition: 0.3s ease-in-out;
-}
-
-.contact form input:focus, .contact form textarea:focus {
-  background: rgb(255, 255, 255);
-  color: #121212;
-}
-
-.contact form input::placeholder, .contact form textarea::placeholder {
-  font-size: 16px;
-  font-weight: 400;
-  color: #fff;
-}
-
-.contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
-  color: #121212;
-  opacity: 0.8;
-}
-
-.contact form button {
-  font-weight: 700;
-  color: #fff;
+.contact1 button {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   padding: 14px 48px;
-  font-size: 18px;
   margin-top: 25px;
   border-radius: 0;
   position: relative;
   transition: 0.3s ease-in-out;
 }
 
-.contact form button span {
+.contact1 button span {
   z-index: 1;
   position: relative;
 }
 
-.contact form button:hover {
+.contact1 button a {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact1 button a:hover {
   color: #000;
 }
 
-.contact form button::before {
+.contact1 button::before {
   content: "";
   background: #fff;
   width: 0;
@@ -654,7 +628,7 @@ nav.navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
   transition: 0.3s ease-in-out;
 }
 
-.contact form button:hover::before {
+.contact1 button:hover::before {
   width: 100%;
 }
 
