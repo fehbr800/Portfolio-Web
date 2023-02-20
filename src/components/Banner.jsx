@@ -5,6 +5,10 @@ import HeaderImg from "../assets/img/header-img.png"
 import TrackVisibility from 'react-on-screen';
 import 'animate.css';
 
+
+
+
+
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
@@ -14,6 +18,23 @@ export const Banner = () => {
     const toRotate = ["Front-End Developer", "UI/UX Designer"];
     const period = 2000;
 
+
+
+    const PDF_FILE_URL= 'http://localhost:3000/CurriculoMatheus.pdf'
+    const dowloadFileAtURL=(url)=>{
+        fetch(url).then(response=>response.blob()).then(blob=>{
+          const blobURL = window.URL.createObjectURL(new Blob([blob]))  
+          const fileName = url.split('/').pop()
+            const aTag = document.createElement('a')
+            aTag.href=blobURL
+            aTag.setAttribute('download', fileName)
+            document.body.appendChild(aTag)
+            aTag.click()
+            aTag.remove()
+        })
+            
+    }
+   
 
     useEffect(() => {
         let ticker = setInterval(() => {
@@ -61,7 +82,7 @@ export const Banner = () => {
                                     <p>Tenho 21 anos, atualmente estudo desenvolvimento Full-Stack com especialização Front-End pela Rocketseat.
 
                                         Meu objetivo profissional é me especializar e aprimorar minhas habilidades de desenvolvimento Front-end e ferramentas de testes unitários, focando sempre em qualidade e acessibilidade da aplicação.</p>
-                                    <button onClick={() => console.log("testando")}>Vamos nos Conectar<ArrowRightCircle size={25} /></button>
+                                    <button onClick={() => dowloadFileAtURL(PDF_FILE_URL)}>Download Cv<ArrowRightCircle size={25} /></button>
                                 </div>}
                         </TrackVisibility>
                     </Col>
