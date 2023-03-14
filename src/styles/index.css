@@ -492,8 +492,7 @@ nav.navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
 }
 .project-card ul li {
   font-size: 14px;
-  margin-right: 10px;
-  margin-bottom: 5px;
+  margin: 0.4rem;
   padding: 5px 10px;
   background-color: rgba(241, 241, 241, 0.2352941176);
   border-radius: 20px;
