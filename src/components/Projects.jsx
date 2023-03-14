@@ -1,87 +1,55 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import React from "react";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/projeto1.png";
-import projImg2 from "../assets/img/projeto2.png";
-import projImg3 from "../assets/img/projeto3.png";
-import ColorSharp2 from "../assets/img/color-sharp2.png";
-import TrackVisibility from 'react-on-screen';
-import 'animate.css';
+import Projeto1 from "../assets/img/projeto1.png";
+import Projeto2 from "../assets/img/projeto2.png";
+import Projeto3 from "../assets/img/projeto3.png";
 
 export const Projects = () => {
     const projects = [
         {
+        
             title: "DH Flix",
-            description: "Design & Development",
-            imgUrl: projImg1,
-            url: "https://digital-house-checkpoint2-frontend.vercel.app/",
+            description: "Primeiro Checkpoint em grupo de 7 membros, onde estive to da instituição Digital House, da matéria Front-end I. Com finalidade de colocar em prática todo o conhecimentos adquirido na matéria ",
+            languages: ["JavaScript", "CSS", "HTML", "Bootstrap", "Git", "GitHub"],
+            image: Projeto1,
+            projectLink: "https://digital-house-checkpoint2-frontend.vercel.app/",
+            githubLink: "https://github.com/fehbr800/Digital-House-Checkpoint2-Frontend-",
         },
         {
+          
             title: "Game-Cards",
-            description: "Design & Development",
-            imgUrl: projImg2,
-            url: "https://digital-house-checkpoint1-front-end2.vercel.app/",
+            description: "Segundo Projeto desenvolvido em trio, da matéria Front-End II, com a finalidade de colocar em prática todo o conhecimento adquirido na matéria",
+            languages: ["JavaScript", "CSS", "HTML", "Bootstrap","Git", "GitHub"],
+            image: Projeto2,
+            projectLink: "https://digital-house-checkpoint1-front-end2.vercel.app",
+            githubLink: "https://github.com/fehbr800/Digital-House-Checkpoint1-Front-End2",
         },
         {
+          
             title: "Movie DB",
-            description: "Design & Development",
-            imgUrl: projImg3,
-            url: "https://react-filmes-eight.vercel.app/",
-            
+            description: "Projeto desenvolvido a fim de estudos",
+            languages: ["ReactJS", "Node.Js", "Bootstrap", "HTML", "CSS"],
+            image: Projeto3,
+            projectLink: "https://react-filmes-eight.vercel.app",
+            githubLink: "https://github.com/fehbr800/React-Filmes",
         },
-      
     ];
+
     return (
-        <section className="project" id="project">
-            <Container>
-                <Row>
-                    <TrackVisibility>
-                        {({ isVisible }) =>
-                            <div className={isVisible ? "animate__animated animate__bounce" : ""}>
+        <div className="d-flex justify-content-center flex-wrap p-0">
+            {projects.map((project) => (
+                <ProjectCard
+                    key={project.title}
+                    title={project.title}
+                    description={project.description}
+                    languages={project.languages}
+                    image={project.image}
+                    projectLink={project.projectLink}
+                    githubLink={project.githubLink}
+                />
+            ))}
+        </div>
+    );
+};
 
-                                <Col>
 
-                                    <h2>Projetos</h2>
-                                    <p>
-                                       Projetos desenvolvidos ao longo de minha jornada
-                                    </p>
-
-                                    <Tab.Container id="projects-tab" defaultActiveKey='first'>
-                                        {/* <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                                            <Nav.Item>
-                                                <Nav.Link eventKey="first">DH</Nav.Link>
-                                            </Nav.Item>
-                                            <Nav.Item>
-                                                <Nav.Link eventKey="second">Tab Two</Nav.Link>
-                                            </Nav.Item>
-                                            <Nav.Item>
-                                                <Nav.Link eventKey="third">Tab Third</Nav.Link>
-                                            </Nav.Item>
-                                        </Nav> */}
-                                        <Tab.Content>
-                                            <Tab.Pane eventKey="first">
-                                                <Row>
-                                                    {
-                                                        projects.map((project, index) => {
-                                                            return (
-                                                                <ProjectCard
-                                                                    key={index}
-                                                                    {...project} />
-                                                            )
-                                                        })
-                                                    }
-                                                </Row>
-                                            </Tab.Pane>
-                                            {/* <Tab.Pane eventKey="second">Lorem Ipsum</Tab.Pane>
-                                            <Tab.Pane eventKey="third">Lorem Ipsum</Tab.Pane> */}
-                                        </Tab.Content>
-                                    </Tab.Container>
-
-                                </Col>
-                            </div>}
-                    </TrackVisibility>
-                </Row>
-            </Container>
-            <img className="background-image-right" src={ColorSharp2} />
-        </section>
-    )
-}

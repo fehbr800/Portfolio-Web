@@ -1,23 +1,25 @@
-import { Col } from "react-bootstrap";
+import React from "react";
 
-export const ProjectCard = ({ title, description, imgUrl, url }) => {
+export const ProjectCard = ({ title, description, languages, image, projectLink, githubLink }) => {
   return (
-    <Col size={12} sm={6} md={4}>
-      <div className="proj-imgbx">
-        <img src={imgUrl}>
+    <div className="project-card">
+      <img src={image} alt={title} />
+      <div className="project-content">
+        <h3 className="mt-3">{title}</h3>
+        <p>{description}</p>
+        <ul>
+          {languages.map((language) => (
+            <li key={language}>{language}</li>
+          ))}
+        </ul>
+        <div className="links d-flex">
+          <a target="_blank" className="mx-2 mt-3" href={projectLink}>Ver Projeto</a>
+          <a target="_blank" className="mx-2 mt-3" href={githubLink}>Repositório</a>
           
-        </img>
-       
-        <div className="proj-txtx flex-column">
-          <h4>{title}</h4>
-          <span>{description}</span>
-          <div className="mt-2">
-          <a target = '_blank' href={url}> 
-          <button type="submit">Ver mais</button>
-          </a>
-          </div>
         </div>
       </div>
-    </Col>
-  )
-}
+    </div>
+  );
+};
+
+
