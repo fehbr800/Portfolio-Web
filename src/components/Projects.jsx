@@ -9,7 +9,7 @@ export const Projects = () => {
         {
         
             title: "DH Flix",
-            description: "Primeiro Checkpoint em grupo de 7 membros, onde estive to da instituição Digital House, da matéria Front-end I. Com finalidade de colocar em prática todo o conhecimentos adquirido na matéria ",
+            description: "Primeiro Checkpoint em grupo de 7 membros da instituição Digital House. Matéria Front-end I. Com finalidade de colocar em prática todo o conhecimentos adquirido na matéria ",
             languages: ["JavaScript", "CSS", "HTML", "Bootstrap", "Git", "GitHub"],
             image: Projeto1,
             projectLink: "https://digital-house-checkpoint2-frontend.vercel.app/",
