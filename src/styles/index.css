@@ -461,7 +461,33 @@ nav.navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
   z-index: -4;
 }
 
-.project-card {
+.portfolio {
+  padding: 80px 0;
+  position: relative;
+  background-color: black;
+}
+.portfolio h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+}
+.portfolio p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+}
+.portfolio li {
+  list-style-type: none;
+  margin-left: 2rem;
+  cursor: pointer;
+  letter-spacing: 0.8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.portfolio .project-card {
   background-color: rgba(255, 255, 255, 0.1294117647);
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -470,27 +496,33 @@ nav.navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
   margin: 1rem;
   transition: all 0.3s ease-in-out;
 }
-.project-card:hover {
+@media only screen and (min-width: 300px) and (max-width: 900px) {
+  .portfolio .project-card {
+    width: 100%;
+  }
+}
+.portfolio .project-card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
 }
-.project-card h3 {
+.portfolio .project-card h3 {
   font-weight: 300;
   font-size: 24px;
 }
-.project-card p {
+.portfolio .project-card p {
+  text-align: justify;
   color: #fff;
   font-size: 16px;
   line-height: 1.5rem;
   margin: 0 0 15px;
 }
-.project-card ul {
+.portfolio .project-card ul {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
 }
-.project-card ul li {
+.portfolio .project-card ul li {
   font-size: 14px;
   margin: 0.4rem;
   padding: 5px 10px;
@@ -498,7 +530,7 @@ nav.navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
   border-radius: 20px;
   list-style: none;
 }
-.project-card a {
+.portfolio .project-card a {
   font-size: 16px;
   color: #fff;
   font-weight: 600;
@@ -507,7 +539,7 @@ nav.navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
   border-radius: 20px;
   transition: color 0.3s ease-in-out;
 }
-.project-card a:hover {
+.portfolio .project-card a:hover {
   color: #fff;
   background: rgba(36, 10, 34, 0);
 }
