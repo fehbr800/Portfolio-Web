@@ -5,16 +5,15 @@ import Projeto2 from "../assets/img/projeto2.png";
 import Projeto3 from "../assets/img/projeto3.png";
 
 export const Projects = () => {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [projects, setProjects] = useState([
+
+    const projects = ([
 
         {
 
             title: "DH Flix",
-            description: "Primeiro Checkpoint em grupo de 7 membros da instituição Digital House. Matéria Front-end I. Com finalidade de colocar em prática todo o conhecimentos adquirido na matéria ",
+            description: "Primeiro Checkpoint em grupo de 7 membros, onde estive to da instituição Digital House, da matéria Front-end I. Com finalidade de colocar em prática todo o conhecimentos adquirido na matéria ",
             languages: ["JavaScript", "CSS", "HTML", "Bootstrap", "Git", "GitHub"],
             image: Projeto1,
-            category: "Digital House",
             projectLink: "https://digital-house-checkpoint2-frontend.vercel.app/",
             githubLink: "https://github.com/fehbr800/Digital-House-Checkpoint2-Frontend-",
         },
@@ -24,7 +23,6 @@ export const Projects = () => {
             description: "Segundo Projeto desenvolvido em trio, da matéria Front-End II, com a finalidade de colocar em prática todo o conhecimento adquirido na matéria",
             languages: ["JavaScript", "CSS", "HTML", "Bootstrap", "Git", "GitHub"],
             image: Projeto2,
-            category: "Digital House",
             projectLink: "https://digital-house-checkpoint1-front-end2.vercel.app",
             githubLink: "https://github.com/fehbr800/Digital-House-Checkpoint1-Front-End2",
         },
@@ -34,57 +32,40 @@ export const Projects = () => {
             description: "Projeto desenvolvido a fim de estudos",
             languages: ["ReactJS", "Node.Js", "Bootstrap", "HTML", "CSS"],
             image: Projeto3,
-            category: "Projetos Pessoais",
             projectLink: "https://react-filmes-eight.vercel.app",
             githubLink: "https://github.com/fehbr800/React-Filmes",
         },
+        
     ]);
-    const categories = ['Digital House', 'Danki.Code', 'Projetos Pessoais'];
-
-    const handleCategoryClick = (category) => {
-        setSelectedCategory(category);
-    };
-
-    const filteredProjects = selectedCategory === 'all' ? projects : projects.filter(project => project.category === selectedCategory);
 
 
     return (
 
 
 
-        <div className="portfolio align-items-center flex-wrap p-4">
+        <div className=" card-container d-flex justify-content-center align-items-center flex-wrap row">
 
-            <h2>Projetos</h2>
-            <p>
-                Projetos desenvolvidos ao longo de minha jornada
-            </p>
-            <ul className="categories d-flex justify-content-center align-content-center flex-wrap ">
-                {categories.map((category, index) => (
-                    <li
-                        key={index}
-                        className={selectedCategory === category ? 'active' : ''}
-                        onClick={() => handleCategoryClick(category)}
-                    >
-                        {category}
-                    </li>
-                ))}
-            </ul>
-            <div className=" d-flex justify-content-center flex-wrap">
-                {filteredProjects.map((project) => (
-                    <div className=" project-card d-flex justify-content-center flex-wrap">
-                        <ProjectCard
-                            key={project.title}
-                            title={project.title}
-                            description={project.description}
-                            languages={project.languages}
-                            image={project.image}
-                            projectLink={project.projectLink}
-                            githubLink={project.githubLink}
-                        />
-                    </div>
+            <div className="titulo text-center mb-5">
+                <h2>Projetos</h2>
+            </div>
+            <div className="project-card d-flex flex-wrap p-0 ">
+
+
+                {projects.map((project) => (
+
+                    <ProjectCard
+                        key={project.title}
+                        title={project.title}
+                        description={project.description}
+                        languages={project.languages}
+                        image={project.image}
+                        projectLink={project.projectLink}
+                        githubLink={project.githubLink}
+                    />
                 ))}
             </div>
         </div>
+
     );
 
 
