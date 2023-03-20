@@ -43,7 +43,7 @@ export const Projects = () => {
 
 
 
-        <div className=" card-container d-flex justify-content-center align-items-center flex-wrap row">
+        <div className=" card-container d-flex justify-content-center align-items-center flex-wrap row p-0 m-0">
 
             <div className="titulo text-center mb-5">
                 <h2>Projetos</h2>
