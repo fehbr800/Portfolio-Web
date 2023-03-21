@@ -468,6 +468,7 @@ nav.navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
 
 .project-card {
   border-radius: 10px;
+  background: rgba(21, 21, 21, 0.3450980392);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   width: 30rem;

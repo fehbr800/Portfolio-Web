@@ -48,7 +48,7 @@ export const Projects = () => {
             <div className="titulo text-center mb-5">
                 <h2>Projetos</h2>
             </div>
-            <div className="project-card d-flex flex-wrap p-0 ">
+            <div className="project-card d-flex flex-wrap justify-content-center p-0 ">
 
 
                 {projects.map((project) => (
