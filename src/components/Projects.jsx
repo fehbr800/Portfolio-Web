@@ -3,6 +3,7 @@ import { ProjectCard } from "./ProjectCard";
 import Projeto1 from "../assets/img/projeto1.png";
 import Projeto2 from "../assets/img/projeto2.png";
 import Projeto3 from "../assets/img/projeto3.png";
+import Projeto4 from "../assets/img/projeto4.png";
 
 export const Projects = () => {
 
@@ -29,11 +30,20 @@ export const Projects = () => {
         {
 
             title: "Movie DB",
-            description: "Projeto desenvolvido a fim de estudos",
+            description: "Projeto pessoal desenvolvido a fim de estudos",
             languages: ["ReactJS", "Node.Js", "Bootstrap", "HTML", "CSS"],
             image: Projeto3,
             projectLink: "https://react-filmes-eight.vercel.app",
             githubLink: "https://github.com/fehbr800/React-Filmes",
+        },
+        {
+
+            title: "Clone Amazon Prime",
+            description: "Projeto desenvolvido em estudo pela instituição Danki.Code",
+            languages: ["HTML", "CSS", "Jquery"],
+            image: Projeto4,
+            projectLink: "https://danki-code-clone-amazon.vercel.app/",
+            githubLink: "https://github.com/fehbr800/Danki-Code-FrontEnd/tree/main/amazon-youtube",
         },
         
     ]);
