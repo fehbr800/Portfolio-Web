@@ -5,7 +5,9 @@ import Projeto2 from "../assets/img/projeto2.png";
 import Projeto3 from "../assets/img/projeto3.png";
 import Projeto4 from "../assets/img/projeto4.png";
 import Projeto5 from "../assets/img/projeto5.png";
-
+import Projeto6 from '../assets/img/projeto6.png'
+import Projeto7 from '../assets/img/projeto7.png'
+import Projeto8 from '../assets/img/projeto8.png'
 export const Projects = () => {
 
     const projects = ([
@@ -56,6 +58,33 @@ export const Projects = () => {
             projectLink: "https://challenge-alura-decodificador-texto.vercel.app/",
             githubLink: "https://github.com/fehbr800/Challenge-Alura-Decodificador-Texto",
         },
+        {
+
+            title: "Avancy.co",
+            description: "Na criação da página institucional da Avancy, utilizei o Next.js para otimizar o desempenho e o SEO, garantindo uma entrega rápida de conteúdo. Com o Tailwind CSS, desenvolvi uma interface responsiva e personalizada, resultando em uma página que reflete a identidade da empresa com profissionalismo e modernidade.",
+            languages: [ "NextJs", "TailwindCss"],
+            image: Projeto6,
+            projectLink: "https://avancy.co",
+           
+        },
+        {
+
+            title: "Pagina de Vagas Agro Vagas",
+            description: "Para a página de Vagas da Agro Vagas, utilizei o Next.js para garantir um carregamento rápido e otimizado, melhorando a experiência do usuário e o SEO. Com o Tailwind CSS, criei uma interface clara e responsiva, facilitando a navegação e a busca por oportunidades, resultando em uma página que alia funcionalidade e eficiência, alinhada com a identidade profissional da Agro Vagas.",
+            languages: [ "NextJs", "TailwindCss", "Golang"],
+            image: Projeto7,
+            projectLink: "https://agrovagas.avancy.co/",
+           
+        },
+        {
+
+            title: "Agro Vagas",
+            description: "Para a página da Agro Vagas, utilizei o Next.js para garantir um carregamento rápido e otimizado, melhorando a experiência do usuário e o SEO. Com o Tailwind CSS, criei uma interface clara e responsiva, facilitando a navegação e a busca por oportunidades, resultando em uma página que alia funcionalidade e eficiência, alinhada com a identidade profissional da Agro Vagas.",
+            languages: [ "NextJs", "TailwindCss"],
+            image: Projeto8,
+            projectLink: "https://www.agrovagas.com/",
+           
+        },
         
     ]);
 
@@ -81,7 +110,7 @@ export const Projects = () => {
                         languages={project.languages}
                         image={project.image}
                         projectLink={project.projectLink}
-                        githubLink={project.githubLink}
+                        githubLink={project?.githubLink}
                     />
                 ))}
             </div>
