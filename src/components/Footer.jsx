@@ -5,6 +5,8 @@ import NavIcon2 from '../assets/img/github.png';
 
 
 export const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <Container>
@@ -19,7 +21,7 @@ export const Footer = () => {
               <a target="_blank" href='https://github.com/fehbr800'><img src={NavIcon2} /></a>
              
             </div>
-            <p>Copyright 2022. All Rights Reserved</p>
+           <p>Copyright {currentYear}. All Rights Reserved</p>
           </Col>
         </Row>
       </Container>
