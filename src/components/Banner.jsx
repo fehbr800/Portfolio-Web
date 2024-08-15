@@ -79,11 +79,7 @@ export const Banner = () => {
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <span className="tagline">Bem-vindo ao meu Portfólio</span>
                                     <h1>{`Olá, me chamo Matheus Emanoel`}<br /><span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Front-End Developer", "UI/UX Designer" ]'></span><span className="wrap">{text}</span></h1>
-                                    <p>Tenho 21 anos, atualmente estudo desenvolvimento Full-Stack com especialização Front-End pela Rocketseat.
-
-
-                                        Meu objetivo profissional é me especializar e aprimorar minhas habilidades de desenvolvimento Front-end e ferramentas de testes unitários, focando sempre em qualidade e acessibilidade da aplicação.</p>
-
+                                    <p>Sou um profissional em front-end, dedicado a me especializar e aprimorar minhas habilidades no desenvolvimento front-end e no uso de ferramentas de testes unitários, sempre focando na qualidade e acessibilidade das aplicações que desenvolvo.</p>
 
 
                                         {/* ATUALIZAÇAO FUTURA DOWNLOAD DE CV */}
